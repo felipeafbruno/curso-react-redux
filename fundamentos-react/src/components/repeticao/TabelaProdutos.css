@@ -1,0 +1,12 @@
+.TabelaProdutos table {
+    width: 100%
+}
+
+thead tr {
+    background: #5A6A62;
+    color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+    background: #C6D5CD;
+}
