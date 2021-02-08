@@ -1,0 +1,8 @@
+.App .Cards {
+    /* display: flex = defini que o conteúdo como um flex container */
+    display: flex;
+    /* justify-content = defini a disposição do conteúdo */
+    justify-content: center;
+    /* flex-warp = quebra de linha em um conteúdo */
+    flex-wrap: wrap; 
+}
