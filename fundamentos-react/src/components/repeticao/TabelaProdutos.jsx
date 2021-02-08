@@ -3,10 +3,6 @@ import produtos from '../../data/produtos'
 import './TabelaProdutos.css'
 
 export default props => {
-    const style = {
-        border: '1px'
-    }
-
     const itens = produtos.map((produto, i) => {
         return <tr key={produto.id}> 
                     <td>{produto.id}</td> 
