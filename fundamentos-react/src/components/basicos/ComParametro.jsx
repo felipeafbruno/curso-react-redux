@@ -2,6 +2,7 @@ import React from 'react'
 
 // Componente com parametros
 export default function ComParametro(props) {
+    // parametros ou propriedades são somente de leitura
     const status = props.nota > 7 ? 'Aprovado' : 'Recuperação'
     return ( 
         <div>
