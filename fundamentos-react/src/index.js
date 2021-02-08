@@ -2,9 +2,7 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 
 import './index.css'
-import Primeiro from './components/basicos/Primeiro'
-import ComParametro from './components/basicos/ComParametro'
-import Fragmento from './components/basicos/Fragmento'
+import App from './App'
 
 const el = document.getElementById('root')
 const tag = <strong>Olá React!!!</strong>
@@ -13,8 +11,6 @@ const tag = <strong>Olá React!!!</strong>
 ReactDOM.render(
     // JSX
     <div> 
-        <Primeiro></Primeiro> 
-        <ComParametro titulo="Situação do Aluno" aluno="Felipe" nota={8.5} /> 
-        <Fragmento />
+        <App />
     </div> 
 , el)
