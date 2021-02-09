@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 
 import './Contador.css'
 
+import Display from  './Display'
+import Botoes from  './Botoes'
+import PassoForm from './PassoForm' 
+
 export default class Contador extends Component {
     state = {
         numero: this.props.numeroInicial || 0,
@@ -32,22 +36,25 @@ export default class Contador extends Component {
         })
     }
 
-    setPasso = (e) => {
+    setPasso = (novoPasso) => {
         this.setState({
-            passo: +e.target.value,
+            passo: novoPasso,
         })
     }
 
+    // passo={this.state.passo} - Comunicação Direta
+    /* 
+        setPasso={this.setPasso} - 
+        Comunicação Indireta passando uma function para ser executada no componente filho que vai retornar ao componente pai o novo estado
+        da propriedade
+    */ 
     render() {
         return (
             <div className="Contador">
                 <h2>Contador</h2>
-                <h3>{this.state.numero}</h3>
-                <label htmlFor="">Passo: </label>
-                <input id="passoInt" type="number" 
-                    value={this.state.passo} onChange={this.setPasso}/>
-                <button onClick={this.inc}>+</button>
-                <button onClick={this.dec}>-</button>
+                <Display numero={this.state.numero}></Display>
+                <PassoForm passo={this.state.passo} setPasso={this.setPasso} />
+                <Botoes setInc={this.inc} setDec={this.dec} />
             </div>
         )
     }
