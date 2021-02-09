@@ -21,7 +21,7 @@ export default _ =>
             <h1>Fundamentos React</h1>
             <div className="Cards"> 
 
-                <Card titulo="#11 - Componente Controlado (Input)" color="#4298B5">
+                <Card titulo="#11 - Componente Controlado (Input)" color="#4298B4">
                     <Input></Input>
                 </Card>
 
