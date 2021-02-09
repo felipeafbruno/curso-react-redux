@@ -16,8 +16,7 @@ export default props => {
             - onChange permite que o estado de um componente seja alterado
             - Um componente esta amarrado ao seu estado para sendo assim ele só vai refletir a alteração se o estado for modificado
             - readOnly(Componente não controlado) defini que um componente é apenas de leitura, ou seja, 
-              o componente não vai gerar nenhuma alteração no estado
-            -  
+              o componente não vai gerar nenhuma alteração no estado 
     */ 
     return (
         <div className="Input">
