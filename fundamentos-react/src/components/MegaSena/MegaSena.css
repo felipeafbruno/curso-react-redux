@@ -1,0 +1,8 @@
+.MegaSena input {
+    width: 60px;
+    font-size: 1.4rem;
+}
+
+.MegaSena button:active {
+    background-color: #3A9AD9;
+}
