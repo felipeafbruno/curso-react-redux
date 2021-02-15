@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('./fonts/Oswald-Light.ttf')
+}
+
+body {
+  background-color: #222;
+  font-size: 2rem;
+  font-family: 'Oswald';
+  color: #fff;
+  margin: 30px;
+}
