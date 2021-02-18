@@ -6,7 +6,7 @@ import ValueBox from '../common/widget/ValueBox'
 import Row from '../common/layout/Row'
 import axios from 'axios'
 
-const BASE_URL = "http://localhost:3003/api"
+const BASE_URL = "http://localhost:3005/api"
 class Dashboard extends Component {
     constructor(props) {
         super(props)
