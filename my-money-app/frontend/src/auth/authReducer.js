@@ -6,7 +6,7 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
     switch(action.type) {
-        case 'TOKEN_VALICATED': 
+        case 'TOKEN_VALIDATED': 
             if(action.payload) {
                 return { ...state, validToken: true }
             } else {
