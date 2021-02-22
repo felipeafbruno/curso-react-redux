@@ -6,7 +6,7 @@ const env = require('../../.env')
 
 
 const emailRegex = /\S+@\S+\.\S+/ // Regex para validar o email
-const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6, 20})/ // Regex para validar o password
+const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/ // Regex para validar o password
 
 // Função utilizada caso requisição de login retorne algum erro do banco de dados
 const sendErrorsFromDB = (res, dbErrors) => {
@@ -23,8 +23,8 @@ const login = (req, res, next) => {
     User.findOne({email}, (err, user) => {
         if(err) {
             return sendErrorsFromDB(res, err) 
-        } else if (user && bcript.compareSync(password, user.password)) {
-            const token = jwt.sign(user, env.authSecret, {
+        } else if (user && bcrypt.compareSync(password, user.password)) {
+            const token = jwt.sign({...user}, env.authSecret, {
                 expiresIn: "1 day"
             })
             const { name, email } = user
@@ -39,7 +39,7 @@ const login = (req, res, next) => {
 const validateToken = (req, res, next) => {
     const token = req.body.token || ''
 
-    jwt.verify(token, authSecret, function(err, decoded) {
+    jwt.verify(token, env.authSecret, function(err, decoded) {
         return res.status(200).send({ valid: !err })
     })
 }

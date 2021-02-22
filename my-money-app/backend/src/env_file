@@ -1,0 +1,5 @@
+// Arquivo modelo
+// Criar outro arquivo .env
+module.exports = {
+    authSecrets = ""
+}

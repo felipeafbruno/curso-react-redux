@@ -4,8 +4,8 @@ import axios from 'axios'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import App from './app'
-import Auth from '../auth/auth'
+import App from './App'
+import Auth from '../auth/Auth'
 import { validateToken } from '../auth/authActions'
 
 class AuthOrApp extends Component {

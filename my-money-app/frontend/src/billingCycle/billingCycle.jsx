@@ -9,9 +9,9 @@ import TabsHeader from '../common/tab/TabsHeader'
 import TabsContent from '../common/tab/TabsContent'
 import TabHeader from '../common/tab/TabHeader'
 import TabContent from '../common/tab/TabContent'
-import BillingCycleList from '../billingCycle/BillingCycleList'
-import BillingCycleForm from '../billingCycle/BillingCycleForm'
-import {init, create, update, remove} from '../billingCycle/billingCycleActions'
+import BillingCycleList from './BillingCycleList'
+import BillingCycleForm from './BillingCycleForm'
+import {init, create, update, remove} from './billingCycleActions'
 import { times } from 'lodash'
 
 class BillingCycle extends Component {
